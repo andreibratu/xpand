@@ -1,0 +1,27 @@
+<ion-header no-border>
+  <ion-navbar class="transparent">
+    <ion-title>Create an account</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div ion-fixed padding>
+    <ion-grid>
+      <ion-row align-items-center class="center-content">
+        <ion-col col-12>
+          <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+            <ion-item>
+              <ion-label color="white" floating>Username</ion-label>
+              <ion-input type="text" autocapitalize="none" formControlName="username" clearInput></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="white" floating>Password</ion-label>
+              <ion-input type="password" formControlName="password" [clearOnEdit]="false" clearInput></ion-input>
+            </ion-item>
+            <button ion-button type="submit">Sign up</button>
+          </form>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
